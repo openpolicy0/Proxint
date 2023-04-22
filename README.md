@@ -15,11 +15,11 @@ then get the output results of the proxys
 status code     |           WORKS       |         FROM IP ADDRESS
 =================================================================================
      404         |           DOWN ❌     |             faild
+     404         |           DOWN ❌     |             12.75.123.88
      404         |           DOWN ❌     |             faild
      404         |           DOWN ❌     |             faild
      404         |           DOWN ❌     |             faild
-     404         |           DOWN ❌     |             faild
-     404         |           DOWN ❌     |             faild
+     404         |           DOWN ❌     |             8.8.8.8
      404         |           DOWN ❌     |             faild
      404         |           DOWN ❌     |             faild
      404         |           DOWN ❌     |             faild
@@ -28,4 +28,7 @@ status code     |           WORKS       |         FROM IP ADDRESS
 
 # installing Proxint
 ```
-git clone 
+git clone https://github.com/openpolicy0/Proxint.git
+cd Proxint
+pip install-r requirements.txt 
+```
