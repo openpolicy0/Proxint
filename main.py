@@ -26,7 +26,7 @@ file = input("PROXY FILE (.csv): ")
 if os.path.exists('/home/kali/Proxint/'+file+'.csv'):
    print("[bold pale_turquoise1]proxy file found[/bold pale_turquoise1]")
 else:
-    print("[red1]file not found[/red1]")
+    print("[red1]file not found make sure it is a .csv file[/red1]")
     sys.exit()
 
 csv_f = file+".csv"
