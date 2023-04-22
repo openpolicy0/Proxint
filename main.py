@@ -73,30 +73,4 @@ with concurrent.futures.ThreadPoolExecutor() as executor:
 
 print("[light_green]===========================================================================[/light_green]")
 sleep(1)
-print("[light_green]simplifying proxy IPs that are UP...[/light_green]")
-sleep(1)
-print("[light_green]IPs will be shown only up[/light_green]")
-sleep(1)
-print("[light_green]using the same file containing proxys[/light_green]")
-sleep(1)
-print("[light_green]===========================================================================[/light_green]")
-
-with open(csv_f, 'r') as f:
-    reader = csv.reader(f)
-    for row in reader:
-        file.append(row[0])
-
-def extract(proxy):
-    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0'}
-    try:
-        r = requests.get('https://httpbin.org/ip', headers=headers, proxies={'http' : proxy,'https': proxy}, timeout=2)
-        print('     200         |            UP ✅️      |             '+r.json()['origin'])
-    except:
-        pass
-    return proxy
-
-with concurrent.futures.ThreadPoolExecutor() as executor:
-        executor.map(extract, file)
-
-print("[light_green]===========================================================================[/light_green]")
-print("[light_green]Done scanning proxys[/light_green]")
+print("[light_green]Done[/light_green]")
