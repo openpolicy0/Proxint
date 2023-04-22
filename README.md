@@ -25,3 +25,7 @@ status code     |           WORKS       |         FROM IP ADDRESS
      404         |           DOWN ❌     |             faild
      404         |           DOWN ❌     |             faild
  ```
+
+# installing Proxint
+```
+git clone 
