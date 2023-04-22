@@ -29,6 +29,28 @@ else:
     print("[red1]file not found make sure it is a .csv file[/red1]")
     sys.exit()
 
+protocol = input("http socks4 socks5: ")
+if protocol=="http":
+   print("[magenta3]adding http protocol[/magenta3]")
+   sleep(1)
+   print("[magenta3]Done press enter to start[/magenta3]")
+   sleep(1)
+   anykey=input("[ENTER]")
+
+elif protocol=="socks4":
+     print("[magenta3]adding socks4 protocol[/magenta3]")
+     sleep(1)
+     print("[magenta3]Done press enter to start[/magenta3]")
+     sleep(1)
+     anykey=input("[ENTER]")
+
+elif protocol=="socks5":
+     print("[magenta3]adding http protocol[/magenta3]")
+     sleep(1)
+     print("[magenta3]Done press enter to start[/magenta3]")
+     sleep(1)
+     anykey=input("[ENTER]")
+
 csv_f = file+".csv"
 
 print("[light_green]===========================================================================[/light_green]")
@@ -59,7 +81,7 @@ with open(csv_f, 'r') as f:
 def extract(proxy):
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0'}
     try:
-        r = requests.get('https://httpbin.org/ip', headers=headers, proxies={'socks4' : proxy,'https': proxy}, timeout=2)
+        r = requests.get('https://httpbin.org/ip', headers=headers, proxies={protocol : proxy,'https': proxy}, timeout=2)
         print('     200         |            UP ✅️      |             '+r.json()['origin'])
     except:
         print('     404         |           DOWN ❌     |             faild')
@@ -87,7 +109,7 @@ with open(csv_f, 'r') as f:
 def extract(proxy):
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0'}
     try:
-        r = requests.get('https://ipinfo.io/json', headers=headers, proxies={'http' : proxy,'https': proxy}, timeout=2)
+        r = requests.get('https://ipinfo.io/json', headers=headers, proxies={protocol : proxy,'https': proxy}, timeout=2)
         print('     200         |       UP ✅️      |     '+r.json()['ip'], r.json()['region'], r.json()['country'])
     except:
         pass
