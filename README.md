@@ -1,5 +1,5 @@
 # Proxint
-Input a url and a file of your proxys to see if the website will except your proxys
+Input the proxy file with your proxys and Proxint will detect if your proxys are up or not.
 and use those proxys in proxychains tool ( apt install proxychains ) to add those proxys from your proxy list
 nano /etc/proxychains.conf
 
