@@ -45,7 +45,7 @@ elif protocol=="socks4":
      anykey=input("[ENTER]")
 
 elif protocol=="socks5":
-     print("[magenta3]adding http protocol[/magenta3]")
+     print("[magenta3]adding socks5 protocol[/magenta3]")
      sleep(1)
      print("[magenta3]Done press enter to start[/magenta3]")
      sleep(1)
